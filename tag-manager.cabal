@@ -12,7 +12,7 @@ cabal-version:     >= 1.6
 build-type:        Simple
 homepage:          http://richardfergie.com
 
-executable eanalytica-tests
+executable tests
     main-is:    Tests/main.hs
     build-depends: base
                  , HUnit        >=1.2
@@ -26,7 +26,7 @@ executable eanalytica-tests
                  , wai-test     >=1.2
                  , hspec        >=1.0
 
-executable eanalytica-jsserver
+executable jsserver
     main-is: JSServer/main.hs
 
     other-modules: JSServer.App
