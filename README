@@ -1,0 +1,25 @@
+A simple tag manager written using Warp (Haskell) and Redis.
+
+Install using cabal install.
+
+Run jsserver to start the server
+
+The following javascript will work as the container tag:
+
+<script type="text/javascript">
+          (function() {
+		var script = document.createElement('script');
+                script.type = 'text/javascript';
+                script.async = true;
+		script.src = ('https:' == document.location.protocol ? 'https:' : 'http:') + '//HOSTURL/CLIENTID';
+                var s = document.getElementsByTagName('script')[0];
+                s.parentNode.insertBefore(script, s);
+          })();
+</script>
+
+The HOSTURL is the domain on which the server is running
+The CLIENTID is an identifier for the site on which the container tag is placed
+
+Quite difficult to add and administer tags at the moment; see Redis/Tags.hs for the data structure.
+
+I may add a web frontend to make updating tags simpler but the launch of Google Tag Manager has kind of taken the wind out of my sales with this.
